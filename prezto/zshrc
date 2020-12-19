@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+# source "$HOME/dotfiles/env/install.sh"
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# load every completion after autocomplete loads
+for file in $DOTFILES_DIR/**/*.zsh
+do
+  source $file
+done
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# add vim support
+# bindkey -v
+# export KEYTIMEOUT=1
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

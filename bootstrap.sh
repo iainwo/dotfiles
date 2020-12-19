@@ -11,3 +11,5 @@ fi
 
 echo "Installing dotfiles repository..."
 git clone https://github.com/iainwo/dotfiles.git $DOTFILES_DIR
+
+source $DOTFILES_DIR/install.sh

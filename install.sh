@@ -1,26 +1,25 @@
 #!/bin/bash
 
-DOTFILES_DIR="${HOME}/dotfiles"
+source env/install.sh
 
 echo "Installing Ubuntu packages..."
 sudo apt-get update -y
 sudo apt install -y tmux zsh git
 
-echo "Scaffolding dotfiles directory..."
-mkdir -p $DOTFILES_DIR
-
 echo "Configuring Git..."
-git config --global user.email "iainwong@outlook.com"
-git config --global user.name "Iain Wong"
+git config --global user.email "$GIT_EMAIL"
+git config --global user.name "$GIT_USER"
 
 echo "Installing zprezto..."
-export ZPREZTO_DIR="${DOTFILES_DIR}/.zprezto"
-if [ ! -d $ZPREZTO_DIR ]; then
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "$DOTFILES_DIR/.zprezto"
+export PREZTO_INSTALL="$HOME/.zprezto"
+if [ ! -d $PREZTO_INSTALL ]; then
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git $PREZTO_INSTALL
 fi
 
-for rcfile in $(find $ZPREZTO_DIR/runcoms/ -type f -not -name "README.md" -print);do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.$(basename $rcfile)"
+for rcfile in $PREZTO_CONFIG/*; do
+  if [ ${rcfile: -4} != ".zsh" ]; then
+    ln -s "$rcfile" "$HOME/.$(basename $rcfile)"
+  fi
 done
 
 echo "Using $SHELL - switching to zsh..."

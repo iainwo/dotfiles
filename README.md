@@ -10,6 +10,7 @@ curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | ba
 ```
 
 Programs Installed:
+- git
 - zsh
 - tmux
 
