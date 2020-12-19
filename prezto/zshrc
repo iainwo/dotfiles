@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-# source "$HOME/dotfiles/env/install.sh"
+export DOTFILES_DIR="$HOME/dotfiles"
+source "$DOTFILES_DIR/env/install.sh"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -15,14 +16,15 @@ done
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
+#if [[ -a ~/.localrc ]]
+#then
+#  source ~/.localrc
+#fi
 
 # add vim support
 # bindkey -v
 # export KEYTIMEOUT=1
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,bg=#d78700,bold,underline"
+source $ZSH_AUTOSUG

@@ -36,3 +36,4 @@ function scratch {
   cd $cur_dir
   echo "New scratch dir ready for grinding ;>"
 }
+

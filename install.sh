@@ -11,9 +11,9 @@ git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_USER"
 
 echo "Installing zprezto into $PREZTO_INSTALL with config from $PREZTO_CONFIG..."
-export PREZTO_INSTALL="$HOME/.zprezto"
 if [ ! -d $PREZTO_INSTALL ]; then
   git clone --recursive https://github.com/sorin-ionescu/prezto.git $PREZTO_INSTALL
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_AUTOSUG
 fi
 
 for rcfile in $PREZTO_CONFIG/*; do
