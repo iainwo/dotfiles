@@ -3,7 +3,7 @@
 source ${DOTFILES_DIR:-$HOME/dotfiles}/env/install.sh
 
 echo "Installing Ubuntu packages..."
-sudo apt-get update -y
+sudo apt update -y
 sudo apt install -y tmux zsh git
 
 echo "Installing tools..."
