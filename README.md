@@ -13,4 +13,5 @@ Programs Installed:
 - git
 - zsh
 - tmux
+- neovim
 

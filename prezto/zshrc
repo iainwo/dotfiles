@@ -28,3 +28,6 @@ done
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,bg=#d78700,bold,underline"
 source $ZSH_AUTOSUG
+
+path+=($TOOLS_NVIM)
+export PATH

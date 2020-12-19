@@ -6,6 +6,7 @@ alias pg='ps -ef | grep'
 alias lj='jobs'
 
 alias reload!='. ~/.zshrc'
-alias vi="vim"
-alias v="vim"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
 

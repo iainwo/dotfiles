@@ -6,6 +6,13 @@ echo "Installing Ubuntu packages..."
 sudo apt-get update -y
 sudo apt install -y tmux zsh git
 
+echo "Installing tools..."
+mkdir -p "$TOOLS_NVIM"
+curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o "$TOOLS_NVIM/nvim"
+chmod u+x "$TOOLS_NVIM/nvim"
+mkdir -p $HOME/.config/nvim/
+ln -s $NVIM/init.vim $HOME/.config/nvim/init.vim
+
 echo "Configuring Git User: $GIT_USER with email: $GIT_EMAIL..."
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_USER"
