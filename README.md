@@ -1,6 +1,15 @@
 # dotfiles
 
-## How-to Run
+Scripts and configurations for bootstrapping a new nix environment.
+
+
+To install run:
+
 ```bash
-cat install.sh | bash
+curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | bash
 ```
+
+Programs Installed:
+- zsh
+- tmux
+
