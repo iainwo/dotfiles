@@ -9,6 +9,9 @@ sudo apt install -y tmux zsh git
 echo "Scaffolding dotfiles directory..."
 mkdir -p $DOTFILES_DIR
 
+echo "Configuring Git..."
+git config --global user.email "iainwong@outlook.com"
+git config --global user.name "Iain Wong"
 
 echo "Installing zprezto..."
 export ZPREZTO_DIR="${DOTFILES_DIR}/.zprezto"
