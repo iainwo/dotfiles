@@ -4,7 +4,7 @@ source ${DOTFILES_DIR:-$HOME/dotfiles}/env/install.sh
 
 echo "Installing Ubuntu packages..."
 sudo apt update -y
-sudo apt install -y tmux zsh git
+sudo apt install -y tmux zsh git xclip
 
 echo "Installing Neovim..."
 mkdir -p "$TOOLS_NVIM"
