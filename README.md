@@ -6,9 +6,11 @@ ___
 
 To install run:
 
+1. Run
 ```bash
 curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | bash
 ```
+2. Exit and re-enter SSH connection or Shell
 ___
 
 Programs Installed:
@@ -22,7 +24,8 @@ ___
 
 TODO:
 
-- [ ] config tmux
+- [x] config tmux
+- [ ] config tmux plugin manager
 - [ ] config neovim
 - [ ] zsh auto suggestions
 - [ ] tmuxp
