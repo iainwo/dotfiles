@@ -2,6 +2,8 @@
 
 Scripts and configurations for bootstrapping a new nix environment.
 
+![Terminal](./assets/terminal.png)
+
 ___
 
 To install run:
