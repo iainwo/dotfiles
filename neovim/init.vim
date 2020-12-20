@@ -1,3 +1,50 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-plug config 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'drewtempelmeyer/palenight.vim'
+
+" Plug 'sbdchd/neoformat' " need ot pip install yapf
+
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" sbdchd/neoformat
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+
+" Enable tab to space conversion
+let g:neoformat_basic_format_retab = 1
+
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set background=dark
+colorscheme palenight
+let g:airline_theme = "palenight"
+
+" True colour
+"if (has("nvim"))
+"  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"endif
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
+
+" Italics for my favorite color scheme
+let g:palenight_terminal_italics=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim behaviour
@@ -22,6 +69,15 @@ set wildignore=*.swp	"ignore these file extensions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" https://github.com/vim-airline/vim-airline/wiki/Screenshots
+" papercolor, minimalist, luna, base16
+" let g:airline_theme='<theme>' " <theme> is a valid theme name
+
+" let g:airline_theme='solarized'
+" g:airline_solarized_bg='dark'
+
+
 set encoding=utf8		"use UTF-8
 set nowrap              "do not wrap lines                                      
 set t_Co=256            " Use 256 colour terminal                               
@@ -29,9 +85,9 @@ set background=dark     "utilize colours which compliment a dark background
 set colorcolumn=80      "highlight the 80th column                              
 let base16colorspace=256 "access colors present in 256 colorspace
 
-silent! colorscheme spacegray
-let g:spacegray_underline_search = 1
-let g:spacegray_italicize_comments = 1
+"silent! colorscheme spacegray
+"let g:spacegray_underline_search = 1
+"let g:spacegray_italicize_comments = 1
 
 set showmatch
 syntax on

@@ -15,6 +15,12 @@ curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | ba
 2. Exit and re-enter SSH connection or Shell
 3. <kbd>prefix</kbd>–<kbd>I</kbd> # to install tmux plugins
 4. <kbd>prefix</kbd>–<kbd>U</kbd> # to update tmux plugins
+5. nvim
+  1. :PlugInstall # to install neovim plugins
+  2. :PlugUpdate
+  3. :PlugClean # remove plugins
+  4. :PlugStatus
+  5. :PlugUpgrade # upgrade vim-plug
 ___
 
 Manual:
@@ -34,6 +40,7 @@ Programs Installed:
   - tmux plugin manager
   - tmux yank for copy from tmux buffers to system clipboard
 - neovim
+  - vim plug
 
 ___
 
@@ -41,7 +48,9 @@ TODO:
 
 - [x] config tmux
 - [x] config tmux plugin manager
-- [ ] config neovim
+- [x] config neovim
 - [ ] zsh auto suggestions
 - [ ] tmuxp
 - [ ] zsh jump table to popular directories
+- [ ] backup and restore functionality?
+- [ ] update functionality (or docs)?

@@ -13,6 +13,10 @@ chmod u+x "$TOOLS_NVIM/nvim"
 mkdir -p $HOME/.config/nvim/
 ln -s $NVIM/init.vim $HOME/.config/nvim/init.vim
 
+echo "Installing Vim Plug..."
+curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo "Installing Tmux..."
 ln -s $DOTFILES_DIR/tmux/tmux.conf $HOME/.tmux.conf
 
