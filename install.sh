@@ -37,5 +37,17 @@ for rcfile in $PREZTO_CONFIG/*; do
   fi
 done
 
+echo "Installing Tmux plugins..."
+$HOME/.tmux/plugins/tpm/bin/install_plugins all
+$HOME/.tmux/plugins/tpm/bin/update_plugins all
+
+echo "Installing Neovim plugins..."
+nvim +PlugInstall +qall > /dev/null
+
+
+echo "Installing miniconda..."
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
+
 echo "Using $SHELL - switching to zsh..."
 chsh -s $(which zsh)
