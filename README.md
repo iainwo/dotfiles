@@ -13,14 +13,7 @@ To install run:
 curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | bash
 ```
 2. Exit and re-enter SSH connection or Shell
-3. <kbd>prefix</kbd>–<kbd>I</kbd> # to install tmux plugins
-4. <kbd>prefix</kbd>–<kbd>U</kbd> # to update tmux plugins
-5. nvim
-  1. :PlugInstall # to install neovim plugins
-  2. :PlugUpdate
-  3. :PlugClean # remove plugins
-  4. :PlugStatus
-  5. :PlugUpgrade # upgrade vim-plug
+
 ___
 
 Manual:
@@ -30,6 +23,17 @@ Manual:
 - `Ctrl-Space` + `_` to tmux hsplit 
 - `v`/`vi`/`vim`/`nvim` to open neovim
 - use `extract` bash function to unpack/extract any archives (.tar, .tar.gz, etc.)
+
+Upgrading Plugins:
+
+1. <kbd>prefix</kbd>–<kbd>I</kbd> # to install tmux plugins
+2. <kbd>prefix</kbd>–<kbd>U</kbd> # to update tmux plugins
+3. nvim
+  1. :PlugInstall # to install neovim plugins
+  2. :PlugUpdate
+  3. :PlugClean # remove plugins
+  4. :PlugStatus
+  5. :PlugUpgrade # upgrade vim-plug
 
 Programs Installed:
 
@@ -41,6 +45,7 @@ Programs Installed:
   - tmux yank for copy from tmux buffers to system clipboard
 - neovim
   - vim plug
+- conda
 
 ___
 
