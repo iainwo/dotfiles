@@ -43,7 +43,8 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'history' \
   'fasd' \
-  'tmux'
+  'tmux' \
+  'autosuggestions'
 
 #
 # Autosuggestions
