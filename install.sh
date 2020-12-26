@@ -30,7 +30,7 @@ if [ ! -d $PREZTO_INSTALL ]; then
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_AUTOSUG
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install --all
+  ~/.fzf/install --key-bindings --completion --no-update-rc
 fi
 
 for rcfile in $PREZTO_CONFIG/*; do
