@@ -13,6 +13,14 @@ chmod u+x "$TOOLS_NVIM/nvim"
 mkdir -p $HOME/.config/nvim/
 ln -s $NVIM/init.vim $HOME/.config/nvim/init.vim
 
+echo "Installing kubectl..."
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+echo "Installing Azure CLI..."
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
 echo "Installing Vim Plug..."
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
