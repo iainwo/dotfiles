@@ -25,6 +25,10 @@ echo "Installing Vim Plug..."
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+echo "Installing Go..."
+wget -O /tmp/go.tar.gz -c https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
+tar -C /usr/local -xzf /tmp/go.tar.gz
+
 echo "Installing Tmux..."
 ln -s $DOTFILES_DIR/tmux/tmux.conf $HOME/.tmux.conf
 
