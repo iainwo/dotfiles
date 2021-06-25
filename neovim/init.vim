@@ -98,7 +98,8 @@ set laststatus=2
 set ruler               "display current row and column                         
 set number              "display line numbers                                   
 
-set cursorline
+" set cursorline
+set nocursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim bindings
@@ -146,13 +147,13 @@ nmap <silent> <Leader>/ :nohlsearch<CR>     " Clear search highlighting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"map <Leader>t :NERDTreeToggle<CR>
+map <Leader>t :NERDTreeToggle<CR>
 
 "autocmd vimenter * NERDTree " Open NERDTree by default
 "nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " auto close if only tab is nerdtree
 
-"let NERDTreeShowHidden=1 " show hidden files
+let NERDTreeShowHidden=1 " show hidden files
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  vim-devicons

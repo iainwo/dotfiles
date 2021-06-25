@@ -10,7 +10,7 @@ To install run:
 
 1. Run
 ```bash
-curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | bash
+curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | INSTALL_DEVEL=Y bash
 ```
 2. Exit and re-enter SSH connection or Shell
 

@@ -63,5 +63,12 @@ echo "Installing miniconda..."
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
 bash ~/miniconda.sh -b -p $HOME/miniconda
 
+echo "Installing extras..."
+if [ -n "$INSTALL_DEVEL" ]; then
+  echo "Installing Jekyll..."
+  sudo apt-get -y install ruby-full build-essential zlib1g-dev
+  gem install jekyll bundler
+fi
+
 echo "Using $SHELL - switching to zsh..."
 chsh -s $(which zsh)
