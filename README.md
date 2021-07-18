@@ -10,8 +10,12 @@ To install run:
 
 1. Run
 ```bash
-curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | INSTALL_DEVEL=Y bash
+curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | PROFILE=devel bash
 ```
+These other installation profiles are available:
+- blog
+- devel
+- minimal
 2. Exit and re-enter SSH connection or Shell
 
 ___
