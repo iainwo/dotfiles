@@ -24,6 +24,23 @@ if [ -n "$INSTALL_KUBERNETES" ]; then
   curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
   chmod +x ./kustomize
   sudo mv ./kustomize /usr/local/bin/kustomize
+
+  echo "Installing helm..."
+  curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+fi
+
+if [ -n "$INSTALL_FLUX" ]; then
+  echo "Installing flux..."
+  curl -s https://fluxcd.io/install.sh | sudo bash
+
+  echo "Installing gnupg..."
+  sudo apt install gnupg2 -y
+
+  echo "Installing sops..."
+  curl -L0 https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux -o sops
+  chmod +x ./sops
+  sudo mv ./sops /usr/local/bin/sops
+
 fi
 
 if [ -n "$INSTALL_DOCTL" ]; then
