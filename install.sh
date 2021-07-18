@@ -27,6 +27,9 @@ if [ -n "$INSTALL_KUBERNETES" ]; then
 
   echo "Installing helm..."
   curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+  echo "Installing istioctl..."
+  curl -sL https://istio.io/downloadIstioctl | sh -
 fi
 
 if [ -n "$INSTALL_FLUX" ]; then
