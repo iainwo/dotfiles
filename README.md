@@ -4,33 +4,34 @@ Scripts and configurations for bootstrapping a new nix environment.
 
 ![Terminal](./assets/terminal.png)
 
-___
+## Installation
 
 To install run:
 
 1. Run one of the following commands to bootstrap the environment.
 
-_Agnostic_: __Minimal install for any Ubuntu system__
+__Agnostic__: _Minimal install for any Ubuntu system_
 ```
 curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | bash
 ```
 
-_Development Droplet_: __Install some languages and common infrastructure tools for devel.__
+__Development Droplet__: _Install some languages and common infrastructure tools for devel._
 
 ```
 curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | INSTALL_PYTHON=Y INSTALL_GOLANG=Y INSTALL_KUBERNETES=Y INSTALL_DOCTL=Y bash
 ```
 
-_Blog Droplet_: __Install NeoVim + Jekyll__
+__Blog Droplet__: _Install NeoVim + Jekyll_
 ```
 curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | INSTALL_PYTHON=Y INSTALL_GOLANG=Y INSTALL_KUBERNETES=Y INSTALL_DOCTL=Y bash
 ```
 
 2. Exit and re-enter SSH connection or Shell
 
-___
+3. Open NeoVim and run `:PlugInstall` to install dependencies - restart aftewards.
 
-Manual:
+
+## Manual
 
 - `Ctrl-Space` is the tmux prefix
 - `Ctrl-Space` + `|` to tmux vsplit 
@@ -61,7 +62,7 @@ Programs Installed:
   - vim plug
 - conda
 
-___
+## Roadmap
 
 TODO:
 
