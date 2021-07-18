@@ -21,6 +21,11 @@ if [ -n "$INSTALL_KUBERNETES" ]; then
   sudo mv ./kubectl /usr/local/bin/kubectl
 fi
 
+if [ -n "$INSTALL_DOCTL" ]; then
+  snap install doctl
+fi
+
+
 
 if [ -n "$INSTALL_AZURE" ]; then
   echo "Installing Azure CLI..."

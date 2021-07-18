@@ -8,14 +8,14 @@ ___
 
 To install run:
 
-1. Run
-```bash
-curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | PROFILE=devel bash
-```
-These other installation profiles are available:
-- blog
-- devel
-- minimal
+1. The environment's corresponding command.
+
+| Environment | Description | Command |
+| --- | --- | --- |
+| Agnostic | Minimal install for any Ubuntu system | `curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | bash` |
+| Development Droplet | Install some languages and common infrastructure tools for devel | `curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | INSTALL_PYTHON=Y INSTALL_GOLANG=Y INSTALL_KUBERNETES=Y INSTALL_DOCTL=Y bash` |
+| Blog Droplet | Install NeoVim + Jekyll | `curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh | INSTALL_PYTHON=Y INSTALL_GOLANG=Y INSTALL_KUBERNETES=Y INSTALL_DOCTL=Y bash` |
+
 2. Exit and re-enter SSH connection or Shell
 
 ___
