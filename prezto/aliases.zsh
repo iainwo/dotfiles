@@ -10,3 +10,10 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
+# Kubernetes
+alias k="kubectl"
+alias kgp="kubectl get pods"
+alias kgc="kubectl get configmaps"
+alias kgl="kubectl logs"
+alias kdp="kubectl describe pod"
+alias kge="kubectl get events --sort-by='{.lastTimestamp}'"

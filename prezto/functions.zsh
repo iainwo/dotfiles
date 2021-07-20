@@ -37,3 +37,17 @@ function scratch {
   echo "New scratch dir ready for grinding ;>"
 }
 
+# Kubernetes
+function kns {
+  kubectl config set-context --current --namespace="$1"
+}
+function secret {
+  kubectl get secret "$1" -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
+}
+function ksh {
+  kubectl exec -it "$1" sh
+}
+function kbash {
+  kubectl exec -it "$1" bash
+}
+
