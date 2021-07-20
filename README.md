@@ -13,7 +13,7 @@ To install run:
 
 | Env | Description | Command |
 | --- | --- | --- |
-| Agnostic | Minimal install for any Ubuntu system | `curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh \| bash` |
+| Agnostic | Minimal install for any Ubuntu system | ```curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh \| bash``` |
 | Development Droplet | Install some languages and common infrastructure tools for devel | `curl -s https://raw.githubusercontent.com/iainwo/dotfiles/main/bootstrap.sh \| INSTALL_PYTHON=Y INSTALL_GOLANG=Y INSTALL_KUBERNETES=Y INSTALL_DOCTL=Y bash` |
 
 __Agnostic__: _Minimal install for any Ubuntu system_
