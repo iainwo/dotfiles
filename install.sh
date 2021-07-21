@@ -32,12 +32,10 @@ if [ -n "$INSTALL_KUBERNETES" ]; then
   curl -sL https://istio.io/downloadIstioctl | sh -
 
   echo "Installing jq..."
-  VERSION=jq-1.6 BINARY=jq-linux64 wget https://github.com/stedolan/jq/releases/download/${VERSION}/${BINARY} -O -|\
-  && mv ${BINARY} /usr/bin/jq
+  (export VERSION=jq-1.6 BINARY=jq-linux64; wget https://github.com/stedolan/jq/releases/download/${VERSION}/${BINARY}; chmod +x $BINARY; mv $BINARY /usr/bin/jq)
 
   echo "Installing yq..."
-  VERSION=v4.11.1 BINARY=yq_linux_amd64.tar.gz wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY}.tar.gz -O - |\
-  tar xz && mv ${BINARY} /usr/bin/yq
+  (export VERSION=v4.11.1 BINARY=yq_linux_amd64; wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY}.tar.gz -O - | tar xz && mv ${BINARY} /usr/bin/yq)
 fi
 
 if [ -n "$INSTALL_FLUX" ]; then
