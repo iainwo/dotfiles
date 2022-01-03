@@ -1,7 +1,7 @@
 #!/bin/bash
 
+source ${DOTFILES_DIR:-$HOME/dotfiles}/env/${PROFILE:-basic}.sh
 source ${DOTFILES_DIR:-$HOME/dotfiles}/env/install.sh
-source ${DOTFILES_DIR:-$HOME/dotfiles}/env/profiles/${PROFILE:-minimal}.sh
 
 echo "Installing Ubuntu packages..."
 sudo apt update -y
